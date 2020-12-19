@@ -5,7 +5,7 @@
         <h2>{{ computedType }}</h2>
       </header>
       <div class="card-content">
-        <h2>{{ type }}</h2>
+        <h2>{{ computedName }}</h2>
         <ul>
           <li>
             <CardListItem
@@ -28,12 +28,12 @@ export default {
   components: {
     CardListItem
   },
-  created() {
-    console.log("contet", this.content);
-  },
   computed: {
     computedType() {
-      return this.type == "Marca" ? "Marcas" : "Modelos";
+      return this.type == "brand" ? "Marcas" : "Modelos";
+    },
+    computedName() {
+      return this.type == "brand" ? "Marca" : "Modelo";
     }
   }
 };

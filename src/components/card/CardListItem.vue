@@ -17,7 +17,7 @@ export default {
   computed: {
     ...mapState(["selectedBrand"]),
     computedType() {
-      return this.type == "Marca" ? "Marcas" : "Modelos";
+      return this.type == "brand" ? "Marcas" : "Modelos";
     }
   },
   methods: {
