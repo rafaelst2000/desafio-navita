@@ -27,6 +27,7 @@ export default {
   --bg-gray: #f7f8fb;
   --header-gray: #f8f9fc;
   --border-gray: #e3e6f0;
+
   font-size: 10px;
 }
 * {
@@ -45,7 +46,7 @@ a {
 
 body {
   color: #5a5c69;
-  background-color: #f7f8fb;
+  background-color: var(--bg-gray);
   font-family: "Open Sans";
 }
 

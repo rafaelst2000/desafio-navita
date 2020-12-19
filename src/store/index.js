@@ -4,8 +4,14 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: {
+    selectedBrand: {}
+  },
+  mutations: {
+    SET_BRAND(state, payload) {
+      state.selectedBrand = payload;
+    }
+  },
   actions: {},
   modules: {}
 });
