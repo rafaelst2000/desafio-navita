@@ -1,8 +1,18 @@
 <template>
   <div class="home">
     <h1 class="title">Veículos</h1>
-    <Card type="Marca" :content="marcas" />
-    <Card v-if="modelos.length > 0" type="Modelo" :content="modelos" />
+    <div>
+      <Card type="Marca" :content="brands" v-if="brands.length > 0" />
+      <Loading v-else />
+    </div>
+    <div>
+      <Card
+        v-if="cars.length > 0 && !loadingBrands"
+        type="cars"
+        :content="cars"
+      />
+      <Loading v-if="loadingCars" />
+    </div>
   </div>
 </template>
 
@@ -17,12 +27,13 @@ export default {
 
   data() {
     return {
-      marcas: {},
-      modelos: {}
+      brands: {},
+      cars: {},
+      loadingCars: false
     };
   },
   created() {
-    this.getMarcas();
+    this.getBrands();
   },
   computed: {
     ...mapState(["selectedBrand"])
@@ -31,16 +42,18 @@ export default {
     selectedBrand: {
       deep: true,
       handler: async function() {
+        this.loadingBrands = true;
         api.get(`${this.selectedBrand.codigo}/modelos`).then(res => {
-          this.modelos = res.data.modelos;
+          this.cars = res.data.modelos;
+          this.loadingCars = false;
         });
       }
     }
   },
   methods: {
-    async getMarcas() {
+    async getBrands() {
       api.get("").then(res => {
-        this.marcas = res.data;
+        this.brands = res.data;
       });
     }
   }
