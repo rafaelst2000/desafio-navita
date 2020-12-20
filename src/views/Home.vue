@@ -1,18 +1,18 @@
 <template>
   <div class="home">
     <h1 class="title">Veículos</h1>
-    <div>
+    <transition mode="out-in">
       <Card type="brand" :content="brands" v-if="brands.length > 0" />
       <Loading v-else />
-    </div>
-    <div>
+    </transition>
+    <transition mode="out-in">
       <Card
         v-if="cars.length > 0 && !loadingCars"
         type="cars"
         :content="cars"
       />
       <Loading v-if="loadingCars" />
-    </div>
+    </transition>
   </div>
 </template>
 
