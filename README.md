@@ -1,24 +1,27 @@
-# desafio-navita
+<h2 align="center">
 
-## Project setup
-```
-npm install
-```
+Projeto desenvolvido durante o Desafio Técnico da Navita.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+</h2>
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## **:rocket: Sobre**
+A aplicação desenvolvida consiste em um webiste para uso de uma API de marcas e modelos de carros, onde são listas diversas marcas de automóveis e assim podendo ter acesso aos respectivos modelos.
 
-### Lints and fixes files
-```
-npm run lint
-```
+## **:computer: Tecnologias**
+  
+- **Website: Vue.js 2**;
+- **Diretivas & Hooks**;
+- **Vue Router**;
+- **Vuex**;
+- **CSS Transitions**;
+- **Axios**
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## **🕹 Executando Localmente**
+Para executar esse projeto, é necessário ter o NodeJS instalado
+
+> 1. acesse seu terminal
+> 2. git clone https://github.com/rafaelst2000/desafio-navita.git
+> 3. cd desafio-navita
+> 4. npm install
+> 5. npm run serve
+> 6. No seu navegador, acesse: localhost:8080
