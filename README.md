@@ -9,7 +9,7 @@ A aplicação desenvolvida consiste em um webiste para uso de uma API de marcas 
 
 ## **:computer: Tecnologias**
   
-- **Website: Vue.js 2**;
+- **Vue.js 2**;
 - **Diretivas & Hooks**;
 - **Vue Router**;
 - **Vuex**;
